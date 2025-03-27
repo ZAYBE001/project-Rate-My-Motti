@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
 <html>
     <head>
         <meta charset="utf-8">
@@ -12,28 +9,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./styles.css">
     </head>
-    <body>
+    <body >
+        
         <h1>Rate My Motti</h1>
         <p>Rate My Motti is a website that allows users to rate the mottos of others. Users can submit their own mottos and have them rated by other users. The website will display the top rated mottos on the homepage.</p>
         <p>Users can also search for mottos by keyword or category. They can also view the mottos of a specific user.</p>
         <p>Rate My Motti is a fun and interactive way to share your personal motto with others and see how it compares to others.</p>
         <div id="app">
-            <form id="form"
-        <label for="motto">Enter your Motti:</label>
-        <input type="text" id="motto" name="Motti">
+            <form id="form">
+        <label for="Motti">Enter your Motti:</label>
+        <select id="carmodeles" name="cars">
+            <option value="toyota-corolla">Toyota Corolla</option>
+            <option value="honda-civic">Honda Civic</option>
+            <option value="ford-focus">Ford Focus</option>
+            <option value="bmw-3series">BMW 3 Series</option>
+            <option value="audi-a4">Audi A4</option>
+            <option value="toyota-rav4">Toyota RAV4</option>
+            <option value="honda-crv">Honda CR-V</option>
+            <option value="ford-explorer">Ford Explorer</option>
+            <option value="jeep-wrangler">Jeep Wrangler</option>
+            <option value="mercedes-gle">Mercedes-Benz GLE</option>
+            <option value="ford-f150">Ford F-150</option>
+        </select>
+
         <label for="comfort">comfort:</label>
-        <input type="text" id="comfort" name="comfort">
+        <input type="text" id="comfort" name="comfort" placeholder="Enter comfort">
         <label for="Handling">Handling:</label>
-        <input type="text" id="Handling" name="Handling">
+        <input type="text" id="Handling" name="Handling" placeholder="Enter Handling">
         <label for="power">Horsepower:</label>
-        <input type="text" id="power" name="power">
-        <label for="Fuel efficieny">Fuel efficieny:</label>
-        <input type="text" id="Fuel efficieny" name="Fuel efficieny">
+        <input type="text" id="power" name="power" placeholder="Horsepower">
+        <label for="Fuel efficieny">Fuel efficieny Rating:</label>
+        <select id="cars" name="cars">
+            <option value="excellent">Excellent</option>
+            <option value="Fair">Fair</option>
+            <option value="Guzzler">Guzzler</option>
+            </select>
         <label for="price">Price:</label>
-        <input type="text" id="price" name="price">
+        <input type="number" id="price" placeholder="Enter amount" name="price">
         <label for="reliability">Reliability:</label>
-        <input type="text" id="reliability" name="reliability">
-        <button id="submit">Add Your Motti</button>
+        <input type="number" id="reliability" name="reliability"  min="1" max="10">
+        <button id="submit" ><h3>Add Your Motti</h3></button>
         </form>
         </div>
         
