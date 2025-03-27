@@ -1,29 +1,57 @@
-const cars = [
-    { id: 1, name: "Shoyu Ramen", comfort: "exelent", image:"", rating: 5, Horsepower:"349 horsepower" },
-    { id: 2, name: "meat & baked potaoes", restaurant: "Menya", image: "Meat & baked potatoes.jpeg", rating: 4, comment: "Very flavorful!" },
-    { id: 3, name: "naruto", restaurant: "Ramen-ya", image: "naruto.jpg" , rating: 3, comment: "Good, but not great" },
-    { id: 4, name: "kojiro", restaurant: "Ramen-ya", image: "kojiro.jpg " , rating:5 , comment:"nice dish"},
-    {id: 5, name: "nirvana", restaurant: "Ramen-ya", image:"nirvana.jpg" , rating: 3, comment: "nice, but not great" }
- ];
+let allImaages = document.getElementById('AllImages');
+
+
 
 function displayImage (){
-    fetch('')
+    fetch('http://localhost:3000/images')
+    .then(response => response.json())
+    .then(data => {
+       console.log(data)
+        
+        console.log(allImaages)
+        data.forEach(img => {
+            let image = document.createElement('img')
+            image.src = img.url
+            image.alt = img.title
+            allImaages.appendChild(image)
+        });
+    })
 }
 
+displayImage ()
 
-const currencyInput = document.getElementById("currencyInput");
-const formattedValue = document.getElementById("formattedValue");
+function collectFormData() {
+    const form = document.getElementById('app');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); 
 
- currencyInput.addEventListener("input", () => {
-        let value = parseFloat(currencyInput.value);
-        if (!isNaN(value)) {
-            formattedValue.innerText = new Intl.NumberFormat('en-US', { 
-                style: 'currency', 
-                currency: 'USD' 
-            }).format(value) } 
-            else {formattedValue.innerText = ""
-        }
-        console.log(value);
+        const formData = new ("form");
+        const inputs = document.querySelectorAll('input');
+        const data = {};
+
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+
+        console.log(data);
+
+        
+        fetch('http://localhost:3000/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(result => {
+            console.log('Success:', result);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     });
+}
 
-    
+collectFormData();
+

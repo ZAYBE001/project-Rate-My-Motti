@@ -11,11 +11,19 @@
     </head>
     <body >
         
-        <h1>Rate My Motti</h1>
-        <p>Rate My Motti is a website that allows users to rate the mottos of others. Users can submit their own mottos and have them rated by other users. The website will display the top rated mottos on the homepage.</p>
-        <p>Users can also search for mottos by keyword or category. They can also view the mottos of a specific user.</p>
-        <p>Rate My Motti is a fun and interactive way to share your personal motto with others and see how it compares to others.</p>
+        <h1>RATE MY MOTTI 🚘</h1>
+            <div id="search">
+                <input type="text" id="search-input" placeholder="Search for your Motti">
+                <button id="search-button">Search</button>
+                <ul id="search-results">
+                </ul>
+            </div>
+        
+        <p>Rate My Motti is a website that allows users to rate the ride's of others. Users can search their own ride's and have them rated by other users. The website will display the top rated motti's on the homepage.</p>
+        <h2>Top Rated Motti's 🔥</h2>
+        <div id="AllImages"> </div>
         <div id="app">
+
             <form id="form">
         <label for="Motti">Enter your Motti:</label>
         <select id="carmodeles" name="cars">
@@ -24,18 +32,37 @@
             <option value="ford-focus">Ford Focus</option>
             <option value="bmw-3series">BMW 3 Series</option>
             <option value="audi-a4">Audi A4</option>
-            <option value="toyota-rav4">Toyota RAV4</option>
+            <option value="Ford Mustang">Ford Mustang</option>
             <option value="honda-crv">Honda CR-V</option>
             <option value="ford-explorer">Ford Explorer</option>
-            <option value="jeep-wrangler">Jeep Wrangler</option>
-            <option value="mercedes-gle">Mercedes-Benz GLE</option>
-            <option value="ford-f150">Ford F-150</option>
+            <option value="volkswagen arteon">volkswagen arteon</option>
+            <option value="Range Rover vogue">Range Rover vogue</option>
+            <option value="ford-f150 Raptor">Ford F-150 Raptor</option>
         </select>
+        <label for="image">car image:</label>
+        <input type="file" id="image" name="image" accept="image/*">
 
         <label for="comfort">comfort:</label>
-        <input type="text" id="comfort" name="comfort" placeholder="Enter comfort">
+        <select id="comfort " name="comfort">
+            <option value="excellent">😍 (Loved it)</option>
+            <option value="Fair">😐 (Average experience)</option>
+            <option value="Poor">😠 (Frustrating experience)</option>
+            </select>
         <label for="Handling">Handling:</label>
-        <input type="text" id="Handling" name="Handling" placeholder="Enter Handling">
+        
+      <div class="rating">
+      <input value="5" name="rating" id="star5" type="radio">
+      <label for="star5"></label>
+       <input value="4" name="rating" id="star4" type="radio">
+       <label for="star4"></label>
+      <input value="3" name="rating" id="star3" type="radio">
+     <label for="star3"></label>
+     <input value="2" name="rating" id="star2" type="radio">
+     <label for="star2"></label>
+      <input value="1" name="rating" id="star1" type="radio">
+      <label for="star1"></label>
+      </div>
+
         <label for="power">Horsepower:</label>
         <input type="text" id="power" name="power" placeholder="Horsepower">
         <label for="Fuel efficieny">Fuel efficieny Rating:</label>
@@ -47,11 +74,18 @@
         <label for="price">Price:</label>
         <input type="number" id="price" placeholder="Enter amount" name="price">
         <label for="reliability">Reliability:</label>
-        <input type="number" id="reliability" name="reliability"  min="1" max="10">
-        <button id="submit" ><h3>Add Your Motti</h3></button>
+        <input type="number" id="reliability" name="reliability"  min="1" max="10" placeholder="Enter a number between 1-10">
+        <label for="comment">Comment:</label><br>
+        <textarea id="comment" name="comment" rows="5   " required></textarea><br><br>
+        <button id="submit" ><h4>Add Your Motti</h4></button>
         </form>
         </div>
-        
+        <div id="mottos">
+            
+            <ul id="motto-list">
+            </ul>
+            <p>Rate My Motti is a fun and interactive way to share your personal motti's(ride's) with others and see how it compares to others.</p>
+        </div>
         <script src="./index.js"></script>
     </body>
 </html>

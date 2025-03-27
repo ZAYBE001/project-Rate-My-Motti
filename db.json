@@ -2,33 +2,34 @@
   "images": [
     {
       "id": 1,
-      "url": "https://www.google.com",
-      "title": "Google"
+      "url": "CARS/1-BMW-3-Series.jpg",
+      "title": "BMW 3 Series"
     },
     {
       "id": 2,
-      "url": "https://www.facebook.com",
-      "title": "Facebook"
+      "url": "CARS/VW_20Arteon_20front.jpg",
+      "title": "Volkswagen Arteon"
+      
     },
     {
       "id": 3,
-      "url": "https://www.instagram.com",
-      "title": "Instagram"
+      "url": "CARS/ford-focus-st-edition-2024.jpg",
+      "title": "Ford Focus ST Edition"
     },
     {
       "id": 4,
-      "url": "https://www.twitter.com",
-      "title": "Twitter"
+      "url": "CARS/2024-lexus-gx-550-prototype-front-quarter.jpg",
+      "title": "Lexus GX 550"
     },
     {
       "id": 5,
-      "url": "https://www.linkedin.com",
-      "title": "Linkedin"
+      "url": "CARS/33.avif",
+      "title": "Range Rover vogue"
     },
     {
       "id": 6,
-      "url": "https://www.youtube.com",
-      "title": "Youtube"
+      "url": "CARS/2019-Toyota-Corolla-Hatchback-XSE-front-three-quarter-03.avif",
+      "title": "Toyota Corolla Hatchback"
     }
   ]
 }

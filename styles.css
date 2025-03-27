@@ -1,8 +1,10 @@
 h1{text-align:center;
-    padding-top: 30px;
+    padding-top: 60px;
     color: #0bdaffd5;}
 form{width: 100%;
     height: 100%;
+    font-size: 25px;
+    border-radius: 20px;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -10,7 +12,7 @@ form{width: 100%;
     flex-direction: column;
     color:rgba(0, 255, 221, 0.719);} 
 button{
-    margin: 20px;
+    margin: 30px;
     width: 90px;
     height: 60px;
     color: white;
@@ -23,11 +25,77 @@ p{font-size: 20px;
     font-weight: bold;
     color: #e4e4e4;
      text-align: center;} 
-body{background-image: url(layered-waves-haikei.svg);
+body{background-image: url(blob-scene-haikei.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;}
-h6 {
-    font-size: 10px;
-}
+ #AllImages{
+    margin: 100px auto 50px;
+    display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px
+    }   
+img{width: 290px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 10px #f59300d5;
+    transition: 0.5s;}
+img:hover{transform: scale(1.7);}
+   
+nav{display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    text-align: center;}
+input{width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;}
+input[type="submit"]{width: 100px;
+    height: 40px;
+    background-color: #16a7e0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;}
+input[type="submit"]:hover{background-color:rgba(0, 255, 221, 0.719);} 
+select{width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;}
+
+.rating {
+        display: inline-block;
+      }
+      
+.rating input {
+        display: none;
+      }
+      
+.rating label {
+        float: right;
+        cursor: pointer;
+        color: #ccc;
+        transition: color 0.3s;
+      }
+      
+.rating label:before {
+        content: '\2605';
+        font-size: 30px;
+      }
+      
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+        color: #f77c09;
+        transition: color 0.3s;
+      }
+h2{color: #0bdaffd5;
+    text-align: center;
+    padding-top: 20px;}      
+      
